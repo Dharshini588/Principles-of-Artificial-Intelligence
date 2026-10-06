@@ -1,0 +1,84 @@
+# EXPERIMENT 6: PROGRAMS IN PROLOG
+
+## AIM
+
+To write and execute simple programs in PROLOG using facts, rules, queries, and arithmetic operations.
+
+## OBSERVATION
+
+### 1. Family Relationships
+
+**Problem:** Define family relationships and find the grandparent relationship using PROLOG.
+
+**Program:**
+
+```prolog
+% Facts
+parent(john, mary).
+parent(mary, susan).
+parent(john, mike).
+
+% Rule
+grandparent(X, Y) :- parent(X, Z), parent(Z, Y).
+
+% Query
+% ?- grandparent(john, susan).
+```
+
+**Output:**
+
+```text
+true.
+```
+
+---
+
+### 2. Animal Classification
+
+**Problem:** Identify whether an animal is a mammal based on its features.
+
+**Program:**
+
+```prolog
+% Facts
+has_hair(tiger).
+gives_milk(tiger).
+
+% Rule
+mammal(X) :- has_hair(X), gives_milk(X).
+
+% Query
+% ?- mammal(tiger).
+```
+
+**Output:**
+
+```text
+true.
+```
+
+---
+
+### 3. Simple Arithmetic Knowledge Base
+
+**Problem:** Implement simple addition using PROLOG.
+
+**Program:**
+
+```prolog
+% Rule
+add(X, Y, Z) :- Z is X + Y.
+
+% Query
+% ?- add(5, 7, Z).
+```
+
+**Output:**
+
+```text
+Z = 12.
+```
+
+## RESULT
+
+Thus, the given PROLOG programs for family relationships, animal classification, and simple arithmetic operations were successfully written and executed, and the expected results were obtained.
